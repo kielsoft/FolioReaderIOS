@@ -1,0 +1,5 @@
+platform :ios, 9.0'
+target 'EpubKittyExample' do
+  pod 'epub_kitty_ios_lib', :path => '../'
+end
+use_modular_headers!
