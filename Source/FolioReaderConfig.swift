@@ -98,34 +98,34 @@ open class FolioReaderConfig: NSObject {
     // MARK: Colors
 
     /// Base header custom TintColor
-    open var tintColor = UIColor(rgba: "#6ACC50")
+    @objc open var tintColor = UIColor(rgba: "#6ACC50")
 
     /// Menu background color
-    open var menuBackgroundColor = UIColor.white
+    @objc open var menuBackgroundColor = UIColor.white
 
     /// Menu separator Color
-    open var menuSeparatorColor = UIColor(rgba: "#D7D7D7")
+    @objc open var menuSeparatorColor = UIColor(rgba: "#D7D7D7")
 
     /// Menu text color
-    open var menuTextColor = UIColor(rgba: "#767676")
+    @objc open var menuTextColor = UIColor(rgba: "#767676")
 
     /// Menu text color
-    open var menuTextColorSelected = UIColor(rgba: "#6ACC50")
+    @objc open var menuTextColorSelected = UIColor(rgba: "#6ACC50")
     
     // Day mode nav color
-    open var daysModeNavBackground = UIColor.white
+    @objc open var daysModeNavBackground = UIColor.white
     
     // Day mode nav color
-    open var nightModeNavBackground = UIColor(rgba: "#131313")
+    @objc open var nightModeNavBackground = UIColor(rgba: "#131313")
     
     /// Night mode background color
-    open var nightModeBackground = UIColor(rgba: "#131313")
+    @objc open var nightModeBackground = UIColor(rgba: "#131313")
 
     /// Night mode menu background color
-    open var nightModeMenuBackground = UIColor(rgba: "#1E1E1E")
+    @objc open var nightModeMenuBackground = UIColor(rgba: "#1E1E1E")
 
     /// Night mode separator color
-    open var nightModeSeparatorColor = UIColor(white: 0.5, alpha: 0.2)
+    @objc open var nightModeSeparatorColor = UIColor(white: 0.5, alpha: 0.2)
 
     /// Media overlay or TTS selection color
     open lazy var mediaOverlayColor: UIColor! = self.tintColor
@@ -133,45 +133,45 @@ open class FolioReaderConfig: NSObject {
     // MARK: Custom actions
 
     /// hide the navigation bar and the bottom status view
-    open var hideBars = false
+    @objc open var hideBars = false
 
     /// If `canChangeScrollDirection` is `true` it will be overrided by user's option.
     open var scrollDirection: FolioReaderScrollDirection = .defaultVertical
 
     /// Enable or disable hability to user change scroll direction on menu.
-    open var canChangeScrollDirection = true
+    @objc open var canChangeScrollDirection = true
 
     /// Enable or disable hability to user change font style on menu.
-    open var canChangeFontStyle = true
+    @objc open var canChangeFontStyle = true
     
     /// Should hide navigation bar on user tap
-    open var shouldHideNavigationOnTap = true
+    @objc open var shouldHideNavigationOnTap = true
 
     /// Allow sharing option, if `false` will hide all sharing icons and options
-    open var allowSharing = true
+    @objc open var allowSharing = true
 
     /// Enable TTS (Text To Speech)
-    open var enableTTS = true
+    @objc open var enableTTS = true
     
     /// Display book title in navbar
-    open var displayTitle = false
+    @objc open var displayTitle = false
 
     /// Hide the page indicator
-    open var hidePageIndicator = false
+    @objc open var hidePageIndicator = false
 
     /// Go to saved position when open a book
-    open var loadSavedPositionForCurrentBook = true
+    @objc open var loadSavedPositionForCurrentBook = true
     
     // MARK: Quote image share
 
     /// Custom Quote logo
-    open var quoteCustomLogoImage = UIImage(readerImageNamed: "icon-logo")
+    @objc open var quoteCustomLogoImage = UIImage(readerImageNamed: "icon-logo")
 
     /// Add custom backgrounds and font colors to Quote Images
     open var quoteCustomBackgrounds = [QuoteImage]()
 
     /// Enable or disable default Quote Image backgrounds
-    open var quotePreserveDefaultBackgrounds = true
+    @objc open var quotePreserveDefaultBackgrounds = true
 
     // MARK: Realm
 
@@ -181,46 +181,46 @@ open class FolioReaderConfig: NSObject {
     // MARK: Localized strings
 
     /// Localizes Highlight title
-    open var localizedHighlightsTitle = NSLocalizedString("Highlights", comment: "")
+    @objc open var localizedHighlightsTitle = NSLocalizedString("Highlights", comment: "")
 
     /// Localizes Content title
-    open var localizedContentsTitle = NSLocalizedString("Contents", comment: "")
+    @objc open var localizedContentsTitle = NSLocalizedString("Contents", comment: "")
 
     /// Use the readers `UIMenuController` which enables the highlighting etc. The default is `true`. If set to false it's possible to modify the shared `UIMenuController` for yourself. Note: This doesn't disable the text selection in the web view.
-    open var useReaderMenuController = true
+    @objc open var useReaderMenuController = true
 
     /// Used to distinguish between multiple or different reader instances. The content of the user defaults (font settings etc.) depends on this identifier. The default is `nil`.
-    open var identifier: String?
+    @objc open var identifier: String?
 
     /// Localizes Highlight date format. This is a `dateFormat` from `NSDateFormatter`, so be careful 🤔
-    open var localizedHighlightsDateFormat = "MMM dd, YYYY | HH:mm"
-    open var localizedHighlightMenu = NSLocalizedString("Highlight", comment: "")
-    open var localizedDefineMenu = NSLocalizedString("Define", comment: "")
-    open var localizedPlayMenu = NSLocalizedString("Play", comment: "")
-    open var localizedPauseMenu = NSLocalizedString("Pause", comment: "")
-    open var localizedFontMenuNight = NSLocalizedString("Night", comment: "")
-    open var localizedPlayerMenuStyle = NSLocalizedString("Style", comment: "")
-    open var localizedFontMenuDay = NSLocalizedString("Day", comment: "")
-    open var localizedLayoutHorizontal = NSLocalizedString("Horizontal", comment: "")
-    open var localizedLayoutVertical = NSLocalizedString("Vertical", comment: "")
-    open var localizedReaderOnePageLeft = NSLocalizedString("1 page left", comment: "")
-    open var localizedReaderManyPagesLeft = NSLocalizedString("pages left", comment: "")
-    open var localizedReaderManyMinutes = NSLocalizedString("minutes", comment: "")
-    open var localizedReaderOneMinute = NSLocalizedString("1 minute", comment: "")
-    open var localizedReaderLessThanOneMinute = NSLocalizedString("Less than a minute", comment: "")
-    open var localizedShareWebLink: URL? = nil
-    open var localizedShareChapterSubject = NSLocalizedString("Check out this chapter from", comment: "")
-    open var localizedShareHighlightSubject = NSLocalizedString("Notes from", comment: "")
-    open var localizedShareAllExcerptsFrom = NSLocalizedString("All excerpts from", comment: "")
-    open var localizedShareBy = NSLocalizedString("by", comment: "")
-    open var localizedCancel = NSLocalizedString("Cancel", comment: "")
-    open var localizedShare = NSLocalizedString("Share", comment: "")
-    open var localizedChooseExisting = NSLocalizedString("Choose existing", comment: "")
-    open var localizedTakePhoto = NSLocalizedString("Take Photo", comment: "")
-    open var localizedShareImageQuote = NSLocalizedString("Share image quote", comment: "")
-    open var localizedShareTextQuote = NSLocalizedString("Share text quote", comment: "")
-    open var localizedSave = NSLocalizedString("Save", comment: "")
-    open var localizedHighlightNote = NSLocalizedString("Note", comment: "")
+    @objc open var localizedHighlightsDateFormat = "MMM dd, YYYY | HH:mm"
+    @objc open var localizedHighlightMenu = NSLocalizedString("Highlight", comment: "")
+    @objc open var localizedDefineMenu = NSLocalizedString("Define", comment: "")
+    @objc open var localizedPlayMenu = NSLocalizedString("Play", comment: "")
+    @objc open var localizedPauseMenu = NSLocalizedString("Pause", comment: "")
+    @objc open var localizedFontMenuNight = NSLocalizedString("Night", comment: "")
+    @objc open var localizedPlayerMenuStyle = NSLocalizedString("Style", comment: "")
+    @objc open var localizedFontMenuDay = NSLocalizedString("Day", comment: "")
+    @objc open var localizedLayoutHorizontal = NSLocalizedString("Horizontal", comment: "")
+    @objc open var localizedLayoutVertical = NSLocalizedString("Vertical", comment: "")
+    @objc open var localizedReaderOnePageLeft = NSLocalizedString("1 page left", comment: "")
+    @objc open var localizedReaderManyPagesLeft = NSLocalizedString("pages left", comment: "")
+    @objc open var localizedReaderManyMinutes = NSLocalizedString("minutes", comment: "")
+    @objc open var localizedReaderOneMinute = NSLocalizedString("1 minute", comment: "")
+    @objc open var localizedReaderLessThanOneMinute = NSLocalizedString("Less than a minute", comment: "")
+    @objc open var localizedShareWebLink: URL? = nil
+    @objc open var localizedShareChapterSubject = NSLocalizedString("Check out this chapter from", comment: "")
+    @objc open var localizedShareHighlightSubject = NSLocalizedString("Notes from", comment: "")
+    @objc open var localizedShareAllExcerptsFrom = NSLocalizedString("All excerpts from", comment: "")
+    @objc open var localizedShareBy = NSLocalizedString("by", comment: "")
+    @objc open var localizedCancel = NSLocalizedString("Cancel", comment: "")
+    @objc open var localizedShare = NSLocalizedString("Share", comment: "")
+    @objc open var localizedChooseExisting = NSLocalizedString("Choose existing", comment: "")
+    @objc open var localizedTakePhoto = NSLocalizedString("Take Photo", comment: "")
+    @objc open var localizedShareImageQuote = NSLocalizedString("Share image quote", comment: "")
+    @objc open var localizedShareTextQuote = NSLocalizedString("Share text quote", comment: "")
+    @objc open var localizedSave = NSLocalizedString("Save", comment: "")
+    @objc open var localizedHighlightNote = NSLocalizedString("Note", comment: "")
 
     public convenience init(withIdentifier identifier: String) {
         self.init()
